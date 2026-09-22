@@ -1,5 +1,5 @@
 # University Course Registration Database
-
+Last reviewed for Milestone 1.
 ## Problem Description
 
 Universities need to manage large amounts of information about students, courses, instructors, departments, and course enrollments. When this information is stored manually or across separate files, it can lead to duplicated data, errors, and difficulty retrieving important information.
