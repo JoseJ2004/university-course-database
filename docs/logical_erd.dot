@@ -1,0 +1,15 @@
+digraph ERD {
+  graph [rankdir=LR];
+  node [shape=record];
+
+  Students [label="{STUDENTS|student_id (PK)\lname\lemail\l}"];
+  Courses [label="{COURSES|course_id (PK)\lcourse_name\lcredits\l}"];
+  Instructors [label="{INSTRUCTORS|instructor_id (PK)\lname\lemail\l}"];
+  Sections [label="{SECTIONS|section_id (PK)\lcourse_id (FK)\linstructor_id (FK)\lsemester\l}"];
+  Enrollments [label="{ENROLLMENTS|student_id (PK, FK)\lsection_id (PK, FK)\lenrollment_date\lgrade\l}"];
+
+  Courses -> Sections [label="1:N"];
+  Instructors -> Sections [label="1:N"];
+  Students -> Enrollments [label="1:N"];
+  Sections -> Enrollments [label="1:N"];
+}
